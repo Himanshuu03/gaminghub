@@ -13,7 +13,7 @@ const Navbar = (props) => {
   }
   useEffect(()=>{
     checkIsThereInput(click);
-  },[click,checkIsThereInput])
+  },[click])
   return (
     <div>
       <nav className="relative flex w-full flex-wrap items-center justify-between bg-blue-800 py-2 text-neutral-500 shadow-lg lg:py-4">
