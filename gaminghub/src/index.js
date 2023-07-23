@@ -4,11 +4,13 @@ import App from "./App";
 import "./index.css";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import {BrowserRouter} from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
+    <BrowserRouter>
     <App />
-    <ToastContainer />
+    <ToastContainer/>
+    </BrowserRouter>
   </div>
 );

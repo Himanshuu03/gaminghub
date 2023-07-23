@@ -5,11 +5,14 @@ import Navbar from "./components/Navbar";
 import gameData from "./gameData.js";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Routes ,Route } from "react-router-dom";
+import TicTacToe from "./games/TicTacToe";
+import RockPaperScissors from "./games/RockPaperScissors";
 
 function App() {
   const [data ,setData] = useState(gameData);
   function checkIsThereInput(title){
-    const updatedData = gameData.filter((e)=>(e.title === title));
+    const updatedData = gameData.filter((e)=>((e.title).toLowerCase() === (title).toLowerCase()));
     if(title === "all"){
       setData(gameData);
     }
@@ -24,7 +27,13 @@ function App() {
   return (
     <div>
       <Navbar title="Gaming Hub" checkIsThereInput={checkIsThereInput}></Navbar>
-      <Cards gameData={data}></Cards>
+      <Routes>
+        <Route path="/" element={ <Cards gameData={data}></Cards>}/>
+        <Route path="/tictactoe" element={<TicTacToe></TicTacToe>}/>
+        <Route path="/rockpaperscissors" element={<RockPaperScissors></RockPaperScissors>}/>
+
+      </Routes>
+     
     </div>
   );
 }
