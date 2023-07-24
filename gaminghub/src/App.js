@@ -29,7 +29,7 @@ function App() {
   }
   return (
     <div>
-      <Navbar title="Gaming Hub" checkIsThereInput={checkIsThereInput} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}></Navbar>
+      <Navbar title="Gaming Hub" checkIsThereInput={checkIsThereInput} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setData={setData}></Navbar>
       <Routes>
         <Route path="/" element={<Cards gameData={data}></Cards>}/>
         <Route path="/tictactoe" element={<TicTacToe></TicTacToe>}/>
