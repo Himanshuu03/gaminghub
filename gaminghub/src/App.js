@@ -8,9 +8,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Routes ,Route } from "react-router-dom";
 import TicTacToe from "./games/TicTacToe";
 import RockPaperScissors from "./games/RockPaperScissors";
+import { Login } from "./components/Login";
+import { SingUp } from "./components/SingUp";
 
 function App() {
   const [data ,setData] = useState(gameData);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   function checkIsThereInput(title){
     const updatedData = gameData.filter((e)=>((e.title).toLowerCase() === (title).toLowerCase()));
     if(title === "all"){
@@ -26,14 +29,14 @@ function App() {
   }
   return (
     <div>
-      <Navbar title="Gaming Hub" checkIsThereInput={checkIsThereInput}></Navbar>
+      <Navbar title="Gaming Hub" checkIsThereInput={checkIsThereInput} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}></Navbar>
       <Routes>
-        <Route path="/" element={ <Cards gameData={data}></Cards>}/>
+        <Route path="/" element={<Cards gameData={data}></Cards>}/>
         <Route path="/tictactoe" element={<TicTacToe></TicTacToe>}/>
         <Route path="/rockpaperscissors" element={<RockPaperScissors></RockPaperScissors>}/>
-
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}></Login>}></Route>
+        <Route path="/signup" element={<SingUp setIsLoggedIn={setIsLoggedIn}></SingUp>}></Route>
       </Routes>
-     
     </div>
   );
 }
