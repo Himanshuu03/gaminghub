@@ -9,7 +9,7 @@ export default function Card(props) {
 
   return (
     <div>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg ml-2">
+      <div className="max-w-sm rounded overflow-hidden shadow-xl ml-2">
         <img className="" src={image.src} alt={image.alt}/>
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{title}</div>
@@ -18,10 +18,10 @@ export default function Card(props) {
           </p>
         </div>
         <div>
-        <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded m-3.5">
+        <button className="bg-slate-500 hover:bg-white hover:text-slate-600 text-white font-bold py-2 px-4 rounded m-3.5 hover:scale-110">
             Play With Friends
         </button>
-        <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-slate-500 hover:bg-white hover:text-slate-600 text-white font-bold py-2 px-4 rounded  hover:scale-110">
             Play With Random
         </button>
         </div>

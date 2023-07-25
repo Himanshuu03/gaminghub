@@ -34,6 +34,7 @@ export const SignupForm = ({setIsLoggedIn}) => {
         }
     }
   return (
+    <div>
     <form onSubmit={submitHandler}>
         <div className='flex justify-between items-center mt-3'> 
         <label>
@@ -73,8 +74,21 @@ export const SignupForm = ({setIsLoggedIn}) => {
             </span>
         </label>
         <div className="flex justify-center items-center">
-             <button className="px-4 py-2 rounded-md bg-blue-600 text-white mt-10 w-[100px] text-xl">Sign In</button>
-        </div>
+                  <button type="submit" className="px-4 py-2 rounded-md bg-slate-600 text-white mt-10 w-[100px] text-xl">Sign In</button>
+                </div>
+                <div className="flex w-full mt-4 items-center">
+                    <div className="w-6/12 h-[1px] bg-gray-300 ml-2 mr-2">
+                    </div>
+                    <div>
+                    <p>OR</p>
+                    </div>
+                    <div className="w-6/12 h-[1px] bg-gray-300 ml-2 mr-2">
+                    </div>
+            </div>
     </form>
+    <div className="flex justify-center items-center">
+    <button className="px-4 py-2 rounded-md bg-slate-600 text-white mt-5 w-10/12 text-xl">Countinue with Google</button>
+</div>
+</div>
   )
 }
