@@ -54,6 +54,16 @@ const Navbar = (props) => {
      </div>
      </nav>
      {
+      isLoggedIn && 
+      <Link to="/memepage">
+      <button
+      className='bg-slate-500 hover:bg-white hover:text-slate-600 text-white font-bold py-2 px-4 rounded mr-4 ml-4 w-[170px] hover:scale-110'
+      >
+        Gif's Page
+      </button>
+      </Link>
+     }
+     {
        isLoggedIn &&
       <Link to="/login">
        <button onClick={()=>{
@@ -62,16 +72,6 @@ const Navbar = (props) => {
        className='bg-slate-500 hover:bg-white hover:text-slate-600 text-white font-bold py-2 px-4 rounded mr-4 ml-4 w-[100px] hover:scale-110'>
         Logout
         </button>
-      </Link>
-     }
-     {
-      isLoggedIn && 
-      <Link to="/memepage">
-      <button
-      className='bg-slate-500 hover:bg-white hover:text-slate-600 text-white font-bold py-2 px-4 rounded mr-4 ml-4 w-[170px] hover:scale-110'
-      >
-        Meme Page
-      </button>
       </Link>
      }
     </div>

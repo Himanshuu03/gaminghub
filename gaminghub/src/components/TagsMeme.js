@@ -7,7 +7,7 @@ export default function TagsMeme() {
     const {gif,loading,fetchData} = useGif(tag);
   return (
     <div className='w-6/12 m-2 shadow-xl bg-slate-100 rounded-lg flex flex-col items-center'>
-    <h1 className='w-11/12 mt-2 bg-slate-200 text-center text-slate-800 font-bold text-2xl h-[45px] py-1 rounded-lg shadow-xl'>Random Memes</h1>
+    <h1 className='w-11/12 mt-2 bg-slate-200 text-center text-slate-800 font-bold text-2xl h-[45px] py-1 rounded-lg shadow-xl'>Random {tag} Gifs</h1>
     {
         loading ? (<Spinner></Spinner>) :(<img src={gif} alt='generated gif' className='mt-10 w-10/12'></img>)
     }
@@ -18,7 +18,7 @@ export default function TagsMeme() {
     }></input>
     <button className='w-10/12 bg-slate-300 rounded-lg text-lg py-2 mb-[20px] hover:scale-110' onClick={()=>{
         fetchData(tag)
-    }}>Generate Random Meme</button>
+    }}>Generate Random Gif</button>
 </div>
   )
 }
