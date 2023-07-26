@@ -29,7 +29,7 @@ function App() {
     }
   }
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen ">
       <Navbar title="Gaming Hub" checkIsThereInput={checkIsThereInput} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setData={setData}></Navbar>
       <Routes>
         <Route path="/" element={<Cards gameData={data}></Cards>}/>

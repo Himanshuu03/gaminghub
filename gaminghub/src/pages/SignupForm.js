@@ -38,7 +38,7 @@ export const SignupForm = ({setIsLoggedIn}) => {
     <form onSubmit={submitHandler}>
         <div className='flex justify-between items-center mt-3'> 
         <label>
-            <p className="text-[1.3rem] ml-4">First Name<sup>*</sup></p>
+            <p className="text-[1.3rem] ml-4">First Name<sup className="text-red-700">*</sup></p>
             <input  className="w-[80%] mr-2 px-4 py-3 ml-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required type='text' value={formData.firstName} name='firstName' placeholder='Himanshu' onChange={changeHandler}></input>
         </label>
@@ -49,12 +49,12 @@ export const SignupForm = ({setIsLoggedIn}) => {
         </label>
         </div>
         <label>
-            <p className="text-[1.3rem] ml-4 mt-3">Email Address</p>
+            <p className="text-[1.3rem] ml-4 mt-3">Email Address<sup className="text-red-700">*</sup></p>
             <input className="w-[90%] mr-2 px-4 py-3 ml-2  border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
             required type="email" value={formData.email} name='email' placeholder='Email Address' onChange={changeHandler}></input>
         </label>
         <label>
-            <p className="text-[1.3rem] ml-4 mt-3">Password<sup>*</sup></p>
+            <p className="text-[1.3rem] ml-4 mt-3">Password<sup className="text-red-700">*</sup></p>
             <input className="w-[85%] mr-2 px-4 py-3 ml-2  border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
             required type={showPassword ? "text" :"password"} name='password' placeholder='Password' value={formData.password} onChange={changeHandler}></input>
             <span className="inline-block text-[30px]" onClick={()=>{
@@ -64,7 +64,7 @@ export const SignupForm = ({setIsLoggedIn}) => {
             </span>
         </label>
         <label>
-            <p className="text-[1.3rem] ml-4 mt-3">Confirm Password<sup>*</sup></p>
+            <p className="text-[1.3rem] ml-4 mt-3">Confirm Password<sup className="text-red-700">*</sup></p>
             <input className="w-[85%] mr-2 px-4 py-3 ml-2  border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
              required value={formData.confirmPassword} type={showConfirmPassword ? "text" :"password"} name='confirmPassword' placeholder='Confirm Password' onChange={changeHandler}></input>
             <span className="inline-block text-[30px]" onClick={()=>{

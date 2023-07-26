@@ -29,12 +29,12 @@ export const LoginForm = ({setIsLoggedIn}) => {
     <div>
          <form onSubmit={submitHandler} className="mt-3">
                 <label>
-                    <p className="text-[1.3rem] ml-4">Email Address<sup>*</sup></p>
+                    <p className="text-[1.3rem] ml-4">Email Address<sup className="text-red-700">*</sup></p>
                     <input className="w-[85%] mr-2 px-4 py-3 ml-2  border-b border-gray-300 focus:outline-none focus:ring-2 focus:border-transparent" 
                     required type="email" placeholder='Email Address' name='email' value={formData.email} onChange={changeHandler}></input>
                 </label>
                 <label>
-                    <p className="text-[1.3rem] mt-4 ml-4">Password<sup>*</sup></p>
+                    <p className="text-[1.3rem] mt-4 ml-4">Password<sup className="text-red-700">*</sup></p>
                     <input className="w-[85%] mr-2 px-4 py-3 ml-2 border-b border-gray-300 focus:outline-none focus:ring-2 focus:border-transparent"
                     required type= {showPassword ? "text" : "password"} placeholder="Password" name='password' value={formData.password} onChange={changeHandler}></input>
                     <span className="inline-block text-[30px]" onClick={()=>{
